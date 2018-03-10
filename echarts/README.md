@@ -1,5 +1,12 @@
 # echarts 用法示例
 
+## 请注意微信版本要求
+支持微信版本 >= 6.6.3，对应基础库版本 >= 1.9.91。
+
+调试的时候，需要在微信开发者工具中，将“详情”下的“调试基础库”设为 1.9.91 及以上版本。
+
+发布前，需要在 [https://mp.weixin.qq.com](https://mp.weixin.qq.com) 的“设置”页面，将“基础库最低版本设置”设为 1.9.91。当用户微信版本过低的时候，会提示用户更新。
+
 ## 具体操作
 
 1. 下载 [echarts-for-weixin](https://github.com/ecomfe/echarts-for-weixin) 。
@@ -123,6 +130,10 @@ ec-canvas {
 
 </style>
 ```
+
+最终效果：
+
+![](./docs/dev.png)
 
 ## Build Setup
 
