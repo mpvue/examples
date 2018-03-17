@@ -6,12 +6,12 @@ export default {
 
 <style>
 .container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 10rpx 0;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 </style>

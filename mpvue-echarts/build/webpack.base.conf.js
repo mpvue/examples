@@ -2,21 +2,23 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var charts = require('../src/pages/index/charts')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+var entry = {
+  app: resolve('./src/main.js'),
+  'pages/index': resolve('./src/pages/index/main.js')
+}
+
+charts.forEach(chart => {
+  entry[`pages/demos/${chart.id}`] = resolve(`./src/pages/demos/${chart.id}/main.js`)
+})
+
 module.exports = {
-  entry: {
-    app: resolve('./src/main.js'),
-    'pages/index': resolve('./src/pages/index/main.js'),
-    'pages/demos/bar': resolve('./src/pages/demos/bar/main.js'),
-    'pages/demos/boxplot': resolve('./src/pages/demos/boxplot/main.js'),
-    'pages/demos/funnel': resolve('./src/pages/demos/funnel/main.js'),
-    'pages/demos/gauge': resolve('./src/pages/demos/gauge/main.js'),
-    'pages/demos/graph': resolve('./src/pages/demos/graph/main.js')
-  },
+  entry,
   target: require('mpvue-webpack-target'),
   output: {
     path: config.build.assetsRoot,

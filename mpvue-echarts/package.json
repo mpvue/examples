@@ -13,7 +13,7 @@
   "dependencies": {
     "echarts": "^4.0.4",
     "mpvue": "^1.0.1",
-    "mpvue-echarts": "^0.1.0"
+    "mpvue-echarts": "^0.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
