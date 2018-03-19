@@ -9,6 +9,8 @@
 import echarts from 'echarts'
 import mpvueEcharts from 'mpvue-echarts'
 
+let barChart, scatterChart
+
 function getBarOption() {
   return {
     color: ['#37a2da', '#32c5e9', '#67e0e3'],
@@ -179,26 +181,23 @@ export default {
     return {
       ecBar: {
         onInit: function (canvas, width, height) {
-          const barChart = echarts.init(canvas, null, {
+          barChart = echarts.init(canvas, null, {
             width: width,
             height: height
           });
           canvas.setChart(barChart);
 
-          // 将 barChart 绑定到 this，以供其他函数访问
-          this.barChart = barChart;
           barChart.setOption(getBarOption());
         }
       },
       ecScatter: {
         onInit: function (canvas, width, height) {
-          const scatterChart = echarts.init(canvas, null, {
+          scatterChart = echarts.init(canvas, null, {
             width: width,
             height: height
           });
           canvas.setChart(scatterChart);
 
-          this.scatterChart = scatterChart;
           scatterChart.setOption(getScatterOption());
         }
       }
