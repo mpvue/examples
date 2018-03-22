@@ -13,7 +13,7 @@ export default {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: 'MpvueEcharts示例',
       navigationBarTextStyle: 'black'
     }
   }
