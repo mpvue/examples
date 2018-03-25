@@ -47,6 +47,7 @@ function initChart(canvas, width, height) {
   };
 
   chart.setOption(option, true);
+  return chart;
 }
 
 

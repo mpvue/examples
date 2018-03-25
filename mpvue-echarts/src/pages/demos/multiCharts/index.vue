@@ -188,6 +188,7 @@ export default {
           canvas.setChart(barChart);
 
           barChart.setOption(getBarOption());
+          return barChart;
         }
       },
       ecScatter: {
@@ -199,6 +200,7 @@ export default {
           canvas.setChart(scatterChart);
 
           scatterChart.setOption(getScatterOption());
+          return scatterChart;
         }
       }
     }
