@@ -73,7 +73,7 @@
         └── main.js
 ```
 
-5. 在 main.js 中引入微信小程序的自定义组件
+5. 在 `pages/bar/main.js` 中引入微信小程序的自定义组件
 
 ``` javascript
 import Vue from 'vue'
@@ -93,7 +93,7 @@ export default {
 }
 ```
 
-6. 在 app.vue 中添加 options、template 等相关配置
+6. 在 `pages/bar/index.vue` 中添加 options、template 等相关配置
 
 ```
 <template>
