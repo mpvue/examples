@@ -71,6 +71,7 @@
     └── bar
         ├── index.vue
         └── main.js
+        └── main.json
 ```
 
 5. 在 `pages/bar/main.js` 中引入微信小程序的自定义组件
@@ -81,19 +82,19 @@ import App from './index'
 
 const app = new Vue(App)
 app.$mount()
+```
 
-// 添加 config json
-export default {
-  config: {
-    // 这儿添加要用的小程序组件
-    usingComponents: {
-      'ec-canvas': '../../../static/ec-canvas/ec-canvas'
-    }
+6. 在 `pages/bar/main.json` 中引入微信小程序的自定义组件
+
+``` json
+{
+  "usingComponents": {
+    "ec-canvas": "../../../static/ec-canvas/ec-canvas"
   }
 }
 ```
 
-6. 在 `pages/bar/index.vue` 中添加 options、template 等相关配置
+7. 在 `pages/bar/index.vue` 中添加 options、template 等相关配置
 
 ```
 <template>
@@ -134,6 +135,8 @@ ec-canvas {
 最终效果：
 
 ![](./docs/dev.png)
+
+如果报错，试试开启 ES6 转 ES5 或者重启开发者工具试试。
 
 ## Build Setup
 

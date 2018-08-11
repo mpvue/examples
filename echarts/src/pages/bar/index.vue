@@ -11,8 +11,10 @@ const options = {
   color: ['#37a2da', '#32c5e9', '#67e0e3'],
   tooltip: {
     trigger: 'axis',
-    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-      type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+    // 坐标轴指示器，坐标轴触发有效
+    axisPointer: {
+      // 默认为直线，可选为：'line' | 'shadow'
+      type: 'shadow'
     }
   },
   legend: {
@@ -111,12 +113,11 @@ export default {
     return {
       ec: {
         // 传 options
-        options: options,
+        options: options
       }
     }
   }
 }
-
 </script>
 
 <style>
